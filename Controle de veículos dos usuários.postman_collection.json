@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "a70180ba-fd5a-4915-afd0-c071363e8063",
+		"name": "Controle de veículos dos usuários",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Cadastro de usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_completo\": \"Charlotte Mendes\",\r\n    \"email\": \"charlotte@email.com\",\r\n    \"data_nascimento\": \"19/05/2001\",\r\n    \"cpf\" : 81135894060\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/findall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"findall"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Veículo",
+			"item": [
+				{
+					"name": "Cadastro de veículo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\": \"Bugatti Veyron\",\r\n    \"marca\": \"Bugatti\",\r\n    \"ano\" : \"2020\",\r\n    \"id_usuario\": {\r\n        \"nome_completo\": \"Ruthe Batista\",\r\n        \"email\": \"ruthebatista04@outlook.com\",\r\n        \"cpf\": 73601111020,\r\n        \"data_nascimento\": \"26/04/2003\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/veiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Veículos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/veiculo/findall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"veiculo",
+								"findall"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
